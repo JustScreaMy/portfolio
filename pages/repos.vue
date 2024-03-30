@@ -9,17 +9,11 @@
 </template>
 
 <script lang="ts" setup>
-const { data, error, pending } = await useFetch(
+import type {Repository} from "~/types/github";
+
+const { data, error, pending } = await useLazyFetch<Array<Repository>>(
   "https://api.github.com/users/justscreamy/repos"
 );
-// TODO: sort it somehow
-// const sortedRepos = computed(() => {
-//   if (!error.value && !pending.value) {
-//     return data.value.sort(
-//       (a, b) => new Date(b.updated_at) - new Date(a.updated_at)
-//     );
-//   }
-// });
 </script>
 
 <style>

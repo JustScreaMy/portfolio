@@ -3,13 +3,17 @@
     <h2>{{ props.repository.name }}</h2>
     <p>{{ props.repository.description }}</p>
     <NuxtLink :href="props.repository.html_url">
-      <NuxtImg class="icon" src="/img/github_icon.png" alt="Github Icon" />
+      <NuxtImg sizes="24px" class="icon" src="/img/github_icon.png" alt="Github Icon"/>
     </NuxtLink>
   </div>
 </template>
 
 <script lang="ts" setup>
-const props = defineProps(["repository"]);
+import type {Repository} from "~/types/github";
+
+const props = defineProps<{
+  repository: Repository
+}>();
 </script>
 
 <style>
@@ -22,9 +26,8 @@ const props = defineProps(["repository"]);
   border-left: 10px #d1cece solid;
   text-align: left;
 }
+
 .icon {
   cursor: pointer;
-  filter: invert(100%);
-  -webkit-filter: invert(100%);
 }
 </style>

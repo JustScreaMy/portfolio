@@ -1,4 +1,3 @@
-// TODO: Make it work somehow
 export interface Repository {
   id: number;
   node_id: string;
