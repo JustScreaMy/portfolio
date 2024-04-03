@@ -14,6 +14,22 @@ export default defineNuxtConfig({
       ],
     },
   },
+  runtimeConfig: {
+    api: {
+      smtp: {
+        auth: {
+          user: process.env.NUXT_API_SMTP_AUTH_USER,
+          pass: process.env.NUXT_API_SMTP_AUTH_PASS,
+        },
+        host: process.env.NUXT_API_SMTP_HOST,
+        port: parseInt(process.env.NUXT_API_SMTP_PORT || "465"),
+        secure: process.env.NUXT_API_SMTP_SECURE === "true",
+      },
+      mail: {
+        from: process.env.NUXT_API_MAIL_FROM,
+      },
+    },
+  },
   devtools: { enabled: true },
   modules: ["@nuxt/image"],
 });
