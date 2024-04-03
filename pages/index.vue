@@ -1,6 +1,5 @@
 <template>
   <div>
-
     <h1>JustScreaMy</h1>
     <p>Hello! My name is Jakub Kropáček and I&apos;m from Czechia.</p>
     <p>
@@ -9,31 +8,36 @@
       last long, after few days I found out about JavaScript on Youtube. And
       that is why I chose the path I&apos;m going on right now.
     </p>
-    <Separator/>
+    <Separator />
     <p>
       I chose
-      <NuxtLink to="https://www.spseiostrava.cz/en/" target="_blank">
+      <NuxtLink
+        to="https://www.spseiostrava.cz/en/"
+        target="_blank"
+        class="weblink"
+      >
         Technical School of Electrical Engineering and Computer Science
       </NuxtLink>
       as my secondary school, and continued to
-      <NuxtLink to="https://www.fei.vsb.cz/en" target="_blank">
+      <NuxtLink to="https://www.fei.vsb.cz/en" target="_blank" class="weblink">
         VSB - Technical University of Ostrava
       </NuxtLink>
       as my college (which im still studying right now).
     </p>
-    <Separator/>
+    <Separator />
     <p>
-      I&apos;m mostly interested in Networking Technologies and Operating Systems
-      but that is only a plan for a university in my future.
+      I&apos;m mostly interested in Networking Technologies and Operating
+      Systems but that is only a plan for a university in my future.
     </p>
-    <Separator/>
+    <Separator />
     <p>
-      What I do right now is experiment with operating systems and configure and deploy services.
-      I also love learning and trying new technologies
+      What I do right now is experiment with operating systems and configure and
+      deploy services. I also love learning and trying new technologies
     </p>
-    <Separator/>
+    <Separator />
     <p>
-      Here are some languages I have tried and have found that I can work decently well with:
+      Here are some languages I have tried and have found that I can work
+      decently well with:
     </p>
     <ul>
       <li>Python</li>
@@ -57,7 +61,7 @@
 <script lang="ts" setup></script>
 
 <style>
-a {
+.weblink {
   text-decoration: none;
   color: #d1cece;
   font-weight: bolder;
