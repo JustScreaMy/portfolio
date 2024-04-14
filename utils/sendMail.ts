@@ -1,11 +1,12 @@
 import { createTransport } from "nodemailer";
 import type SMTPTransport from "nodemailer/lib/smtp-transport";
-// TODO: fix this please, it looks disgusting
 export default async (
-  to: string,
+  senderMail: string,
   subject: string,
-  content: string
-): Promise<{ success: boolean; error?: string }> => {
+  content: string,
+  firstName: string,
+  lastName: string
+): Promise<{ success: boolean }> => {
   const config = useRuntimeConfig();
   const transporter = createTransport({
     host: config.api.smtp.host,
@@ -20,15 +21,24 @@ export default async (
   if (!(await transporter.verify())) {
     return { success: false };
   }
+
+  const mailContent = await renderComponent(
+    firstName,
+    lastName,
+    senderMail,
+    subject,
+    content
+  );
+
   const sent = await transporter.sendMail({
     from: config.api.mail.from,
-    to: to,
-    subject: subject,
-    text: content,
+    to: config.api.mail.to,
+    subject: "Contact Email",
+    html: mailContent,
   });
   if (sent.response.includes("queued")) {
     return { success: true };
   } else {
-    return { success: false, error: sent.response };
+    return { success: false };
   }
 };

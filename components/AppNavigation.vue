@@ -9,7 +9,7 @@
 
 <script lang="ts" setup></script>
 
-<style>
+<style scoped>
 .navbar {
   display: flex;
   justify-content: space-evenly;

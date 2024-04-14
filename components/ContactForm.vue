@@ -35,7 +35,7 @@ const content = useState<string>("content");
 
 const modalShow = useState<boolean>("modalShow", () => true);
 const modalText = useState<string>("errorText");
-// TODO: fix this please, it looks disgusting
+
 const submitForm = async (_event: Event) => {
   const success = await $fetch("/api/mail", {
     method: "POST",
@@ -53,10 +53,11 @@ const submitForm = async (_event: Event) => {
 };
 </script>
 
-<style>
+<style scoped>
 form {
   width: 60%;
   margin: auto;
+  padding-bottom: 1em;
 }
 form fieldset {
   margin-bottom: 2rem;
@@ -89,6 +90,7 @@ form input[type="submit"] {
   border-radius: 4px;
   cursor: pointer;
   font-family: "Source Code Pro", monospace;
+  font-size: x-large;
   width: 100%;
 }
 </style>

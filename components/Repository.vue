@@ -22,7 +22,7 @@ const props = defineProps<{
 }>();
 </script>
 
-<style>
+<style scoped>
 h2 {
   margin: 0;
 }

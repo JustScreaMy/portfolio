@@ -27,6 +27,7 @@ export default defineNuxtConfig({
       },
       mail: {
         from: process.env.NUXT_API_MAIL_FROM,
+        to: process.env.NUXT_API_MAIL_TO,
       },
     },
   },

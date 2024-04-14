@@ -4,7 +4,7 @@
 
 <script lang="ts" setup></script>
 
-<style>
+<style scoped>
 .separator {
   background-color: #111111;
   width: 80%;

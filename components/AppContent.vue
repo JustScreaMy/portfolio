@@ -6,7 +6,7 @@
 
 <script lang="ts" setup></script>
 
-<style>
+<style scoped>
 .content {
   font-size: clamp(1rem, 4vw, 1.5rem);
   margin: auto;
