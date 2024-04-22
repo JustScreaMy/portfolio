@@ -2,6 +2,7 @@
   <div class="navbar">
     <NuxtLink to="/" class="link">About</NuxtLink>
     <NuxtLink to="/repos" class="link">Projects</NuxtLink>
+    <NuxtLink to="/blog" class="link">Blog</NuxtLink>
     <NuxtLink to="/contact" class="link">Contact</NuxtLink>
   </div>
 </template>

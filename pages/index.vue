@@ -11,15 +11,11 @@
     <Separator />
     <p>
       I chose
-      <NuxtLink
-        to="https://www.spseiostrava.cz/en/"
-        target="_blank"
-        class="weblink"
-      >
+      <NuxtLink to="https://www.spseiostrava.cz/en/" target="_blank">
         Technical School of Electrical Engineering and Computer Science
       </NuxtLink>
       as my secondary school, and continued to
-      <NuxtLink to="https://www.fei.vsb.cz/en" target="_blank" class="weblink">
+      <NuxtLink to="https://www.fei.vsb.cz/en" target="_blank">
         VSB - Technical University of Ostrava
       </NuxtLink>
       as my college (which im still studying right now).
@@ -60,10 +56,4 @@
 
 <script lang="ts" setup></script>
 
-<style>
-.weblink {
-  text-decoration: none;
-  color: #d1cece;
-  font-weight: bolder;
-}
-</style>
+<style></style>
