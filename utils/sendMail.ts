@@ -1,5 +1,7 @@
+import { useCompiler } from "#vue-email";
 import { createTransport } from "nodemailer";
 import type SMTPTransport from "nodemailer/lib/smtp-transport";
+
 export default async (
   senderMail: string,
   subject: string,
@@ -22,23 +24,21 @@ export default async (
     return { success: false };
   }
 
-  const mailContent = await renderComponent(
-    firstName,
-    lastName,
-    senderMail,
-    subject,
-    content
-  );
+  const template = await useCompiler("SupportMail.vue", {
+    props: {
+      firstName,
+      lastName,
+      email: senderMail,
+      subject,
+      content,
+    },
+  });
 
   const sent = await transporter.sendMail({
     from: config.api.mail.from,
     to: config.api.mail.to,
     subject: "Contact Email",
-    html: mailContent,
+    html: template.html,
   });
-  if (sent.response.includes("queued")) {
-    return { success: true };
-  } else {
-    return { success: false };
-  }
+  return { success: sent.response.includes("queued") };
 };

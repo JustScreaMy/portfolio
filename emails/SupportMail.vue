@@ -1,5 +1,10 @@
 <template>
   <div>Test</div>
+  <div>{{ firstName }}</div>
+  <div>{{ lastName }}</div>
+  <div>{{ email }}</div>
+  <div>{{ subject }}</div>
+  <div>{{ content }}</div>
 </template>
 
 <script lang="ts" setup>
