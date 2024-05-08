@@ -1,5 +1,5 @@
 <template>
-  <div class="card">
+  <Card>
     <h2>{{ props.repository.name }}</h2>
     <p>{{ props.repository.description }}</p>
     <NuxtLink :href="props.repository.html_url">
@@ -11,7 +11,7 @@
         alt="Github Icon"
       />
     </NuxtLink>
-  </div>
+  </Card>
 </template>
 
 <script lang="ts" setup>
@@ -26,16 +26,6 @@ const props = defineProps<{
 h2 {
   margin: 0;
 }
-.card {
-  background-color: #111111;
-  margin: 15px 0;
-  padding: 15px;
-  font-size: clamp(0.5rem, 3vw, 1rem);
-  border-radius: 10px;
-  border-left: 10px #d1cece solid;
-  text-align: left;
-}
-
 .icon {
   cursor: pointer;
 }

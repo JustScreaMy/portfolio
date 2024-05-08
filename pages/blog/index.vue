@@ -2,14 +2,14 @@
   <div>
     <ContentList path="blog/">
       <template #default="{ list }">
-        <div v-for="blogPost in list" :key="blogPost._path">
+        <Card v-for="blogPost in list" :key="blogPost._path">
           <NuxtLink :to="blogPost._path">
             <h2>
               {{ blogPost.title }}
             </h2>
             <p>{{ blogPost.description }}</p>
           </NuxtLink>
-        </div>
+        </Card>
       </template>
       <template #not-found>
         <p>No blog posts found.</p>
@@ -20,4 +20,15 @@
 
 <script lang="ts" setup></script>
 
-<style></style>
+<style scoped>
+h2 {
+  margin: 0;
+}
+p {
+  margin: 0;
+}
+a {
+  width: 100%;
+  height: 100%;
+}
+</style>
