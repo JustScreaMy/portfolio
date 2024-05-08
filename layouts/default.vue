@@ -22,4 +22,10 @@ body {
 * {
   box-sizing: border-box;
 }
+
+a {
+  text-decoration: none;
+  color: #d1cece;
+  font-weight: bolder;
+}
 </style>

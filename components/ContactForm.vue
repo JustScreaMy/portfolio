@@ -93,4 +93,9 @@ form input[type="submit"] {
   font-size: x-large;
   width: 100%;
 }
+@media only screen and (max-width: 800px) {
+  form {
+    width: 100%;
+  }
+}
 </style>
