@@ -29,8 +29,15 @@
   cursor: pointer;
   border-bottom: 2px solid transparent;
   transition: border-color 0.5s ease;
+  padding: 15px;
 }
 .link:hover {
   border-color: #d1cece;
+}
+@media only screen and (max-width: 800px) {
+  .navbar {
+    height: 150px;
+    flex-wrap: wrap;
+  }
 }
 </style>
