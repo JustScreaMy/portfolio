@@ -39,6 +39,7 @@ export default async (
     to: config.api.mail.to,
     subject: "Contact Email",
     html: template.html,
+    replyTo: senderMail,
   });
   return { success: sent.response.includes("queued") };
 };
