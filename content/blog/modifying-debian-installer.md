@@ -25,3 +25,6 @@ description: "Trying to modify debian installer for quicker installations"
 			- holy shit this might be an option to use the `live-build` I have thought would be shit because it "only"
 			supports creating live CD
 				- https://live-team.pages.debian.net/live-manual/html/live-manual/customizing-installer.en.html#649
+				- there is an issue with live-build, chroot and docker (because im running on fedora)
+					- trying to patch it :D
+				- fuck it, installing VM and sucessfully failed
